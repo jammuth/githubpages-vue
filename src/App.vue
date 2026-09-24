@@ -1,11 +1,19 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <HelloWorld msg="Hello World" />
+  <nav>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About</RouterLink>
+  </nav>
+  <RouterView />
 </template>
 
 <style scoped>
-
+nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
 </style>
